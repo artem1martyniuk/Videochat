@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+    <script>
+        const socket = io('http://192.168.1.52:3200/mediasoup');
+        socket.on('connect', () => {
+            console.log('Connected!');
+        });
+
+
+        function joinRoom() {
+            socket.emit('join_room', {
+                roomId: 'room123',
+                userName: 'TestUser'
+            }, (response) => {
+                console.log('Callback response:', response);
+            });
+        }
+
+        function getProducers() {
+            socket.emit('get_producers', {
+                roomId: 'room123',
+            }, (response) => {
+                console.log('Callback response:', response);
+            });
+        }
+
+        function createTransport() {
+            socket.emit('create_transport', {
+                roomId: 'room123',
+                isProducer: true
+            }, (response) => {
+                console.log('Callback response:', response)
+            })
+        }
+
+    </script>
+</head>
+<body>
+<h1>Socket.io Test</h1>
+<p>Check console for results</p>
+<button onclick="joinRoom()">Join Room</button>
+<button onclick="getProducers()">Get producers</button>
+<button onclick="createTransport()">Create producer transport</button>
+</body>
+</html>

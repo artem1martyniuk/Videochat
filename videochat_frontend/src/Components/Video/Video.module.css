@@ -1,0 +1,67 @@
+:root {
+    --borderRadius: 15px;
+}
+
+.video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--borderRadius);
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1
+}
+
+.label_span {
+    position: absolute;
+    border-radius: var(--borderRadius);
+    bottom: 1%;
+    left: 1%;
+    width: fit-content;
+    max-width: 40%;
+    padding: 0 4px 0 4px;
+    color: white;
+    text-align: center;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+
+.local_video {
+    grid-column: 1;
+    grid-row: 1;
+    pointer-events: none;
+}
+
+.remote_video {
+    -ms-grid-row-span: 1;
+    grid-column: 3;
+}
+
+.scaled_video {
+    grid-row: 2 / span 3;
+    grid-column: 1 / span 2;
+    pointer-events: none;
+}
+
+.video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+    border-radius: var(--borderRadius);
+}
+
+.default_ava {
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: var(--borderRadius);
+}
+

@@ -1,0 +1,98 @@
+.full_container {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    overflow: scroll;
+}
+
+.main_section {
+    position: relative;
+    box-sizing: border-box;
+    width: 80%;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 3fr 7fr 3fr;
+    grid-template-rows: calc(25% - 3vh) calc(25% - 3vh) calc(25% - 0.3vh) calc(25% - 3vh);
+    gap: 4vh;
+    padding: 4vh;
+}
+
+.chat_section {
+    width: 20%;
+    height: 100vh;
+    border-left: 1px solid #e0e0e0;
+    overflow: auto;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.slide {
+    position: absolute;
+    border-left: 1px solid var(--primary-third-light-gray);
+    font-size: 3vh;
+    padding: 2px 2px 2px 2px;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.slide:hover {
+    transition: opacity 0.4s;
+    opacity: 0.2;
+}
+
+.slide_hide {
+    visibility: hidden;
+}
+
+.slide_up {
+    top: 4vh;
+    right: 2vw;
+    border-bottom: 1px solid var(--primary-third-light-gray);
+    border-bottom-left-radius: 15px;
+}
+
+.slide_up::before {
+    content: "";
+    position: absolute;
+    top: -1vh;
+    left: -8vw;
+    right: -1vw;
+    bottom: -8vh;
+}
+
+.slide_up:hover::before {
+
+}
+
+.slide_up:hover {
+    transition: opacity 0.4s;
+    opacity: 0.3;
+}
+
+.slide_down {
+    bottom: 1vh;
+    right: 2vw;
+    border-top: 1px solid var(--primary-third-light-gray);
+    border-top-left-radius: 15px;
+}
+
+.slide_down::before {
+    content: "";
+    position: absolute;
+    top: -8vh;
+    left: -8vw;
+    right: -1vw;
+    bottom: -1vh;
+}
+
+.slide_down:hover::before {
+
+}
+
+.slide_down:hover {
+    transition: opacity 0.4s;
+    opacity: 0.3;
+}

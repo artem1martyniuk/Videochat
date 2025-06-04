@@ -1,0 +1,65 @@
+.main_container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
+.message_container {
+    height: 88%;
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+    overflow-y: scroll;
+}
+
+.input_container {
+    position: relative;
+    border-top: 1px solid var(--primary-third-light-gray);
+    height: 12%;
+    overflow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+}
+
+.input {
+    width: 80%;
+    height: 70%;
+    border-radius: 5px;
+    border: 1px solid var(--primary-third-light-gray);
+    padding: 4px;
+    font-size: 1vw;
+}
+
+.input:focus {
+    outline: none
+}
+
+.send_button {
+    height: 30px;
+    width: 30px;
+    border: 1px solid var(--primary-third-light-gray);
+    padding: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s background-color, 0.5s color, 0.5s transform;
+}
+
+.send_button:hover {
+    background: var(--primary-third-light-gray);
+    color: #3a3535;
+}
+
+.send_button:active {
+    transform: scaleX(0.95) scaleY(0.95);
+}
+
+.error {
+    width: 80%;
+    font-size: 2vh;
+    padding: 10px;
+    background: antiquewhite;
+    opacity: 0.8;
+}

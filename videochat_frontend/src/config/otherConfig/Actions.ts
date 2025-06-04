@@ -1,0 +1,16 @@
+export enum ACTIONS {
+    JOIN_ROOM = 'join_room',
+    GET_PRODUCERS ='get_producers',
+    GET_USERS = 'get_users',
+    GET_USER_NAMES = 'get_user_names',
+    NEW_PRODUCER_CREATED = 'new_producer_created',
+    CREATE_TRANSPORT = 'create_transport',
+    NEW_CHAT_MESSAGE = 'chat_message',
+    BROADCAST_CHAT_MESSAGE = 'broadcast_chat_message',
+    SEND_TRANSPORT_CONNECT = 'send_transport_connect',
+    CONSUME_TRANSPORT_CONNECT = 'receive_transport_connect',
+    TRANSPORT_PRODUCE = 'transport_produce',
+    DISCONNECT_PRODUCERS = 'disconnect_producers',
+    DELETE_STREAM = 'delete_stream',
+    SOCKET_DISCONNECTED = 'socket_disconnected',
+}

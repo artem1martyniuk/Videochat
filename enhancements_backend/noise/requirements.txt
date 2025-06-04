@@ -1,0 +1,9 @@
+torch
+torchvision
+librosa
+pillow
+numpy
+fastapi
+aiortc
+uvicorn
+python-socketio

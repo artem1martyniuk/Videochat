@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "types": ["node", "express"]
+  },
+  "include": ["src"]
+}
